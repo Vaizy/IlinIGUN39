@@ -119,9 +119,7 @@ namespace Tanks
             _prevPosition = position;
 
             CurrentSpeed = (float)Math.Round((double)distance / Time.deltaTime * c_convertMeterInSecFromKmInH, 1);
-            // TODO: разобраться с cinemachine
-            //Debug.Log(_camera.m_Lens);
-            //_camera.m_Lens.FieldOfView = Mathf.Lerp(_fov.x, _fov.y, Mathf.InverseLerp(0f, _maxSpeedFOV, CurrentSpeed));
+            _camera.m_Lens.FieldOfView = Mathf.Lerp(_fov.x, _fov.y, Mathf.InverseLerp(0f, _maxSpeedFOV, CurrentSpeed));
         }
 
         private void ApplyDrive()
