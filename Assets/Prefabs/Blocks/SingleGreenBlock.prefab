@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 365296812556457241}
   - component: {fileID: 2883452224343010402}
   - component: {fileID: 6701629930360280078}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SingleGreenBlock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
