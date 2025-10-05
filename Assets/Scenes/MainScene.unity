@@ -1225,6 +1225,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 33450028805637580, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: Priority
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 33450028805637580, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 33450028805637580, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 120119976594764675, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_FillAmount
+      value: 0.602
+      objectReference: {fileID: 0}
     - target: {fileID: 1570737462224662694, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -1308,6 +1324,38 @@ PrefabInstance:
     - target: {fileID: 5106563786315162014, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
       propertyPath: m_Name
       value: PanelDigitalSpeedometer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524718360999620475, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524718360999620475, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524718360999620475, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524718360999620475, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524718360999620475, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524718360999620475, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5524718360999620475, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -125
+      objectReference: {fileID: 0}
+    - target: {fileID: 6361696281042585771, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -20.00003
       objectReference: {fileID: 0}
     - target: {fileID: 6917507794109144467, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
       propertyPath: m_Name
