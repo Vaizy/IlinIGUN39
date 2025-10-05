@@ -1305,6 +1305,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5106563786315162014, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_Name
+      value: PanelDigitalSpeedometer
+      objectReference: {fileID: 0}
     - target: {fileID: 6917507794109144467, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
       propertyPath: m_Name
       value: GUI
