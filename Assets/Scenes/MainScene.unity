@@ -1150,9 +1150,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3046294428142578616, guid: 765a976b52d0f1c4994ba000a656f136, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3046294428142578616, guid: 765a976b52d0f1c4994ba000a656f136, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3747176882561042512, guid: 765a976b52d0f1c4994ba000a656f136, type: 3}
       propertyPath: _maxTankSpeed
       value: 110
+      objectReference: {fileID: 0}
+    - target: {fileID: 6679270743778362692, guid: 765a976b52d0f1c4994ba000a656f136, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7377214808299547974, guid: 765a976b52d0f1c4994ba000a656f136, type: 3}
       propertyPath: m_Name
