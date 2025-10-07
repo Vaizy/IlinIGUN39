@@ -18,16 +18,16 @@ MonoBehaviour:
     Clip: {fileID: 0}
   - Mult: 2
     Text: Nice
-    Clip: {fileID: 0}
+    Clip: {fileID: 7400000, guid: c9edd473dc0a9904ea8dc83b778c2770, type: 2}
   - Mult: 3
     Text: Pretty well
-    Clip: {fileID: 0}
+    Clip: {fileID: 7400000, guid: 875571658f85c1a48bda479991714a78, type: 2}
   - Mult: 4
     Text: Good job
-    Clip: {fileID: 0}
+    Clip: {fileID: 7400000, guid: 18226063117091d49b6f0229782496c0, type: 2}
   - Mult: 5
     Text: Awesome!
-    Clip: {fileID: 0}
+    Clip: {fileID: 7400000, guid: ebb67584c1ee7c049bd530124e0d3840, type: 2}
   - Mult: 6
     Text: CARNAGE!!!
-    Clip: {fileID: 0}
+    Clip: {fileID: 7400000, guid: e760aed9ca2dac34d8f4d02b92e250bb, type: 2}

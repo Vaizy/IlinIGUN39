@@ -1424,6 +1424,14 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -20.00003
       objectReference: {fileID: 0}
+    - target: {fileID: 6469746066877934873, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_enableVertexGradient
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6894673773775506126, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -2.9999998
+      objectReference: {fileID: 0}
     - target: {fileID: 6917507794109144467, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
       propertyPath: m_Name
       value: GUI
@@ -1431,8 +1439,36 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6693450771667036818, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2766240959200579946}
   m_SourcePrefab: {fileID: 100100000, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+--- !u!1 &2766240959200579945 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6693450771667036818, guid: 8e9dc6d7a6d1f034aa11d0d6ab6840da, type: 3}
+  m_PrefabInstance: {fileID: 2766240959200579944}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &2766240959200579946
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2766240959200579945}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: c9edd473dc0a9904ea8dc83b778c2770, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: c9edd473dc0a9904ea8dc83b778c2770, type: 2}
+  - {fileID: 7400000, guid: 875571658f85c1a48bda479991714a78, type: 2}
+  - {fileID: 7400000, guid: 18226063117091d49b6f0229782496c0, type: 2}
+  - {fileID: 7400000, guid: ebb67584c1ee7c049bd530124e0d3840, type: 2}
+  - {fileID: 7400000, guid: e760aed9ca2dac34d8f4d02b92e250bb, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &7268192835926118854
 PrefabInstance:
   m_ObjectHideFlags: 0
