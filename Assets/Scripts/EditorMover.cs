@@ -6,7 +6,7 @@ namespace DefaultNamespace
 	[RequireComponent(typeof(PositionSaver))]
 	public class EditorMover : MonoBehaviour
 	{
-        [SerializeField]
+        [SerializeField, ReadOnly]
         private PositionSaver _save;
         [SerializeField]
         private float _currentDelay;

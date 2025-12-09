@@ -442,7 +442,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _save: {fileID: 0}
   _currentDelay: 0
-  _delay: 1
+  _delay: 0.552
   _duration: 0.2
 --- !u!114 &1693182631
 MonoBehaviour:
