@@ -7,17 +7,17 @@ namespace DefaultNamespace
 {
 	public class PositionSaver : MonoBehaviour
 	{
-		[SerializeField]
+		[Serializable]
 		public struct Data
 		{
 			public Vector3 Position;
 			public float Time;
 		}
 
-        [SerializeField]
+        [SerializeField, ReadOnly, Tooltip("для заполнения этого поля нужно воспользоваться контекстным меню в инспекторе и командой “Create File”")]
         private TextAsset _json;
 
-        [SerializeField]
+		[field: SerializeField] //, HideInInspector]
         public List<Data> Records { get; private set; }
 
 		private void Awake()
