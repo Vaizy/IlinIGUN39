@@ -337,7 +337,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1693182624}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60856da3b2f5418dafb5e43a23c62aee, type: 3}
   m_Name: 
@@ -422,7 +422,7 @@ Transform:
   m_GameObject: {fileID: 1693182624}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 5.43, z: 5.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -442,8 +442,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _save: {fileID: 0}
   _currentDelay: 0
-  _delay: 0.552
-  _duration: 0.2
+  _delay: 1
+  _duration: 10
 --- !u!114 &1693182631
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3226310a310541faa9835d4026986bb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _json: {fileID: 4900000, guid: fe331b053034ff74e8665bafaeeaa589, type: 3}
+  _json: {fileID: 4900000, guid: 467f7e33373c7fa4baed2d2aa0359b58, type: 3}
   <Records>k__BackingField: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

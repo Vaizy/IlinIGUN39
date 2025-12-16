@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -14,11 +15,11 @@ namespace DefaultNamespace
 			public float Time;
 		}
 
-        [SerializeField, ReadOnly, Tooltip("для заполнения этого поля нужно воспользоваться контекстным меню в инспекторе и командой “Create File”")]
-        private TextAsset _json;
+		[SerializeField, ReadOnly, Tooltip("Для заполнения этого поля нужно воспользоваться контекстным меню в инспекторе и командой “Create File”")]
+		private TextAsset _json;
 
-		[field: SerializeField] //, HideInInspector]
-        public List<Data> Records { get; private set; }
+		[field: SerializeField, HideInInspector]
+		public List<Data> Records { get; private set; }
 
 		private void Awake()
 		{
@@ -30,7 +31,7 @@ namespace DefaultNamespace
 				Debug.LogError("Please, create TextAsset and add in field _json");
 				return;
 			}
-			
+
 			JsonUtility.FromJsonOverwrite(_json.text, this);
 			//todo comment: Для чего нужна эта проверка (что она позволяет избежать)?
 			//если массив Records пустой, то инициализирует его пустыми объектами
@@ -58,14 +59,17 @@ namespace DefaultNamespace
 				prev = curr;
 			}
 		}
-		
+
 #if UNITY_EDITOR
 		[ContextMenu("Create File")]
 		private void CreateFile()
 		{
 			//todo comment: Что происходит в этой строке?
+			//создание пустого файла Path.txt в корне проекта (папка Assets)
 			var stream = File.Create(Path.Combine(Application.dataPath, "Path.txt"));
-			//todo comment: Подумайте для чего нужна эта строка? (а потом проверьте догадку, закомментировав) 
+			//todo comment: Подумайте для чего нужна эта строка? (а потом проверьте догадку, закомментировав)
+			//освобождение ресурсов. File.Create создал файл, но держит за собой. Dispose как бы закрывает файл, предоставляя возможноть им пользоваться другим
+			//после проверки Unity ещё начал писать про бесконечный цикл, не совсем понял почему
 			stream.Dispose();
 			UnityEditor.AssetDatabase.Refresh();
 			//В Unity можно искать объекты по их типу, для этого используется префикс "t:"
@@ -78,7 +82,8 @@ namespace DefaultNamespace
 				//Этой командой можно загрузить сам ассет
 				var asset = UnityEditor.AssetDatabase.LoadAssetAtPath<TextAsset>(path);
 				//todo comment: Для чего нужны эти проверки?
-				if(asset != null && asset.name == "Path")
+				//убедиться что файл загружен и что загружен именно нужный файл (с названием Path)
+				if (asset != null && asset.name == "Path")
 				{
 					_json = asset;
 					UnityEditor.EditorUtility.SetDirty(this);
@@ -92,8 +97,31 @@ namespace DefaultNamespace
 
 		private void OnDestroy()
 		{
-			//todo logic...
+			var text = JsonUtility.ToJson(this, true);
+			//var text = JsonConvert.SerializeObject(Records);
+			var path = UnityEditor.AssetDatabase.GetAssetPath(_json);
+			File.WriteAllText(path, text);
+			UnityEditor.EditorUtility.SetDirty(_json);
+			UnityEditor.AssetDatabase.SaveAssets();
+			UnityEditor.AssetDatabase.Refresh();
+			
 		}
+
+    //    public class JsonVector3Converter : JsonConverter<Vector3>
+    //    {
+    //        public override Vector3 ReadJson(JsonReader reader, Type objectType, Vector3 existingValue, bool hasExistingValue, JsonSerializer serializer)
+    //        {
+				//var x = Convert.ToSingle(reader.ReadAsDouble());
+				//var y = Convert.ToSingle(reader.ReadAsDouble());
+				//var z = Convert.ToSingle(reader.ReadAsDouble());
+				//return new Vector3(x, y, z);
+    //        }
+
+    //        public override void WriteJson(JsonWriter writer, Vector3 value, JsonSerializer serializer)
+    //        {
+				//writer.WriteValue(value);
+    //        }
+    //    }
 #endif
 	}
 }

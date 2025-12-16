@@ -35,6 +35,7 @@ namespace DefaultNamespace
 				_prev = curr;
 				_index++;
 				//todo comment: Для чего нужна эта проверка?
+				//проверка верхней границы массива
 				if (_index >= _save.Records.Count)
 				{
 					enabled = false;
@@ -42,11 +43,15 @@ namespace DefaultNamespace
 				}
 			}
 			//todo comment: Для чего производятся эти вычисления (как в дальнейшем они применяются)?
+			//текущее положение кубика между предыдущей точкой и следующей точкой, где 0 ещё в начале пути, 1 - конец пути 
 			var delta = (Time.time - _prev.Time) / (curr.Time - _prev.Time);
 			//todo comment: Зачем нужна эта проверка?
+			//если значение времени не получилось высчитать, установить время равное 0  
 			if (float.IsNaN(delta)) delta = 0f;
-			//todo comment: Опишите, что происходит в этой строчке так подробно, насколько это возможно
-			transform.position = Vector3.Lerp(_prev.Position, curr.Position, delta);
+            //todo comment: Опишите, что происходит в этой строчке так подробно, насколько это возможно
+            //расчет линейной интерполяции. Задается условный отрезок между двумя позициями А и Б.
+            //дельтой указывается текущее положение. Если дельта, например, 3/8, то текущее положение это сдвиг по отрезку на 3/8 
+            transform.position = Vector3.Lerp(_prev.Position, curr.Position, delta);
 		}
 	}
 }
