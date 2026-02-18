@@ -20,7 +20,8 @@ public class Gates : MonoBehaviour
         {
             return;
         }
-        score++;
+        print(++score);
+        
         Destroy(other.gameObject);
     }
 

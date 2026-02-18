@@ -893,7 +893,7 @@ MonoBehaviour:
   _ballPrefab: {fileID: 8845620500567354173, guid: 302f5ab2ad7c42a4c805398a8c32a6c6, type: 3}
   _startVelocity: 25
   _lifetime: 10
-  _respawnDelay: 5
+  _respawnDelay: 1
 --- !u!54 &1729871100
 Rigidbody:
   m_ObjectHideFlags: 0
