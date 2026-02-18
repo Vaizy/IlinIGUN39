@@ -3,6 +3,9 @@ using UnityEngine;
 
 public class Rotator : MonoBehaviour
 {
+    private Rigidbody _body;
+    private Transform _transform;
+
     [SerializeField]
     public Vector3 rotate;
 
@@ -10,11 +13,13 @@ public class Rotator : MonoBehaviour
     {
         yield return new WaitForFixedUpdate();
 
-        Transform transform = this.transform;
+        _body = GetComponent<Rigidbody>();
+        _transform = _body.transform;
 
         while (true)
         {
-            transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(rotate.x, rotate.y, rotate.z), Time.deltaTime);
+            Quaternion rotation = Quaternion.Slerp(_transform.rotation, _transform.rotation * Quaternion.Euler(rotate.x, rotate.y, rotate.z), Time.deltaTime);
+            _body.MoveRotation(rotation);
             yield return new WaitForFixedUpdate();
         }
     }
